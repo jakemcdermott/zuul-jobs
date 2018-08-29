@@ -1,0 +1,9 @@
+- job:
+    name: flake8
+    description: |
+      Invoke and run flake8
+    run: playbooks/flake8.yml
+    nodeset:
+      nodes:
+        name: container
+        label: f27-oci
