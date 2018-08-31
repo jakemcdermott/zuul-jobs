@@ -3,6 +3,8 @@
   tasks:
     - name: Make sure pipenv and tox are installed
       shell: pip install --user pipenv tox
+    - name: Upgrade pip
+      shell: pip install --user --upgrade pip
     - name: Make sure ansible is installed
       shell: pip install --user ansible
       when: install_ansible | default(True) | bool
