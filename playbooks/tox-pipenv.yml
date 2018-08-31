@@ -1,0 +1,9 @@
+- name: Pipenv Tox-based Tests
+  hosts: all
+  tasks:
+    - name: Make sure pipenv and tox are installed
+      shell: pip install --user pipenv tox
+    - name: Run tox
+      args:
+        chdir: "{{ zuul.project.src_dir }}"
+      command: "tox"

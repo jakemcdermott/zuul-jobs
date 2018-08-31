@@ -1,7 +1,7 @@
 - name: Flake8
   hosts: all
   tasks:
-    - name: Ensure tox is installed
+    - name: Ensure flake8 is installed
       shell: type flake8 || pip install --user flake8
     - name: Run tox
       args:
