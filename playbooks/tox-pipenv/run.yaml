@@ -2,8 +2,10 @@
   hosts: all
   tasks:
     - name: Make sure pipenv and tox are installed
-      shell: pip install --user pipenv tox psutil ansible
+      shell: pip install --user pipenv tox psutil
     - name: Run tox
       args:
         chdir: "{{ zuul.project.src_dir }}"
       command: "tox"
+      environment:
+        PATH: {{ "~/.local/bin" | expanduser }}:{{ ansible_env.PATH }}
