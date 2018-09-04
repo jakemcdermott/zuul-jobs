@@ -8,4 +8,5 @@
     name: pipenv-tox
     description: |
       Run Tox through pipenv
-    run: playbooks/tox-pipenv.yml
+    pre-run: playbooks/tox-pipenv/pre-run.yaml
+    run: playbooks/tox-pipenv/run.yaml
