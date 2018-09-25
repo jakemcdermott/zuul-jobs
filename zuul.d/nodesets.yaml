@@ -1,0 +1,5 @@
+- nodeset:
+    name: static-node
+    nodes:
+      - name: static
+        label: static-ansible
