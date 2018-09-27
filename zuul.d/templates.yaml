@@ -9,10 +9,12 @@
     check:
       jobs:
         - tox:
+            nodeset: static-node
             vars:
               tox_envlist: ALL
     gate:
       jobs:
         - tox:
+            nodeset: static-node
             vars:
               tox_envlist: ALL
