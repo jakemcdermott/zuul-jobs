@@ -1,9 +1,0 @@
-- name: Flake8
-  hosts: all
-  tasks:
-    - name: Ensure flake8 is installed
-      shell: type flake8 || pip install --user flake8
-    - name: Run flake8
-      args:
-        chdir: "{{ zuul.project.src_dir }}"
-      command: "flake8"
