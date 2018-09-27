@@ -1,3 +1,9 @@
+- pragma:
+    implied-branch-matchers: True
+    implied-branches:
+      - master
+      - devel
+
 - project-template:
     name: python
     check:
