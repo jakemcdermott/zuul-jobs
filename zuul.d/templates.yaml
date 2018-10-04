@@ -8,13 +8,19 @@
     name: python
     check:
       jobs:
+        - clean-static-node
         - tox:
+            dependencies:
+              - clean-static-node
             nodeset: static-node
             vars:
               tox_envlist: ALL
     gate:
       jobs:
+        - clean-static-node
         - tox:
+            dependencies:
+              - clean-static-node
             nodeset: static-node
             vars:
               tox_envlist: ALL
