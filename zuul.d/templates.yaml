@@ -23,55 +23,39 @@
       jobs:
         - clean-static-node:
             nodeset: static-node
-        - tox:
+        - tox-api-lint:
             dependencies:
               - clean-static-node
             nodeset: static-node
-            vars:
-              tox_envlist: api-lint
-        - tox:
+        - tox-ui-lint:
             dependencies:
               - clean-static-node
             nodeset: static-node
-            vars:
-              tox_envlist: ui-lint
-        - tox:
+        - tox-api:
             dependencies:
               - clean-static-node
             nodeset: static-node
-            vars:
-              tox_envlist: api
-        - tox:
+        - tox-ui:
             dependencies:
               - clean-static-node
             nodeset: static-node
-            vars:
-              tox_envlist: ui
     gate:
       jobs:
         - clean-static-node:
             nodeset: static-node
-        - tox:
+        - tox-api-lint:
             dependencies:
               - clean-static-node
             nodeset: static-node
-            vars:
-              tox_envlist: api-lint
-        - tox:
+        - tox-ui-lint:
             dependencies:
               - clean-static-node
             nodeset: static-node
-            vars:
-              tox_envlist: ui-lint
-        - tox:
+        - tox-api:
             dependencies:
               - clean-static-node
             nodeset: static-node
-            vars:
-              tox_envlist: api
-        - tox:
+        - tox-ui:
             dependencies:
               - clean-static-node
             nodeset: static-node
-            vars:
-              tox_envlist: ui
