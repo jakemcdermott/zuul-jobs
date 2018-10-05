@@ -8,8 +8,12 @@
     name: python
     check:
       jobs:
+        - clean-static-node:
+            nodeset: static-node
         - tox:
             nodeset: static-node
+            dependencies:
+              - clean-static-nodes
             vars:
               tox_envlist: ALL
 
@@ -17,7 +21,41 @@
     name: python-awx
     check:
       jobs:
-        - tox
+        - clean-static-node:
+            nodeset: static-node
+        - tox-api-lint:
+            dependencies:
+              - clean-static-node
+            nodeset: static-node
+        - tox-ui-lint:
+            dependencies:
+              - clean-static-node
+            nodeset: static-node
+        - tox-api:
+            dependencies:
+              - clean-static-node
+            nodeset: static-node
+        - tox-ui:
+            dependencies:
+              - clean-static-node
+            nodeset: static-node
     gate:
       jobs:
-        - tox
+        - clean-static-node:
+            nodeset: static-node
+        - tox-api-lint:
+            dependencies:
+              - clean-static-node
+            nodeset: static-node
+        - tox-ui-lint:
+            dependencies:
+              - clean-static-node
+            nodeset: static-node
+        - tox-api:
+            dependencies:
+              - clean-static-node
+            nodeset: static-node
+        - tox-ui:
+            dependencies:
+              - clean-static-node
+            nodeset: static-node
