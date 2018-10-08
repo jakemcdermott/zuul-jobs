@@ -17,12 +17,14 @@
 - project-template:
     name: python-awx
     check:
+      queue: awx
       jobs:
         - tox-awx-api-lint
         - tox-awx-ui-lint
         - tox-awx-api
         - tox-awx-ui
     gate:
+      queue: awx
       jobs:
         - tox-awx-api-lint
         - tox-awx-ui-lint
