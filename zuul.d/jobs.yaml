@@ -1,0 +1,30 @@
+- job:
+    name: tox-awx
+    parent: tox
+    pre-run: playbooks/clean-static-node.yaml
+    nodeset: static-node
+    abstract: true
+
+- job:
+    name: tox-awx-api-lint
+    parent: tox-awx
+    vars:
+      tox_envlist: api-lint
+
+- job:
+    name: tox-awx-ui-lint
+    parent: tox-awx
+    vars:
+      tox_envlist: ui-lint
+
+- job:
+    name: tox-awx-api
+    parent: tox-awx
+    vars:
+      tox_envlist: api
+
+- job:
+    name: tox-awx-ui
+    parent: tox-awx
+    vars:
+      tox_envlist: ui
