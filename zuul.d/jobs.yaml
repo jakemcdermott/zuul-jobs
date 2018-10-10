@@ -2,7 +2,6 @@
     name: tox-awx
     parent: tox
     pre-run: playbooks/clean-static-node.yaml
-    run: playbooks/tox-with-sudo.yaml
     nodeset: static-node
     abstract: true
 
