@@ -23,6 +23,7 @@
         - tox-awx-ui-lint
         - tox-awx-api
         - tox-awx-ui
+        - tox-awx-swagger
     gate:
       queue: awx
       jobs:
@@ -30,3 +31,4 @@
         - tox-awx-ui-lint
         - tox-awx-api
         - tox-awx-ui
+        - tox-awx-swagger
