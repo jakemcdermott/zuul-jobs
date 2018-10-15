@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
     - name: Clean out old project artifacts
-      shell: make docker-compose-clean && make clean
+      shell: make docker-compose-clean && make clean && make docker-clean
       args:
         chdir: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
         removes: "awx.egg-info"
