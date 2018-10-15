@@ -13,6 +13,13 @@
             nodeset: static-node
             vars:
               tox_envlist: ALL
+    gate:
+      jobs:
+        - tox:
+            pre-run: playbooks/clean-static-node.yaml
+            nodeset: static-node
+            vars:
+              tox_envlist: ALL
 
 - project-template:
     name: python-awx
