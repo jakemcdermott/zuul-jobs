@@ -31,6 +31,8 @@
         - tox-awx-api
         - tox-awx-ui
         - tox-awx-swagger
+        - tox-awx-schemavalidation:
+            voting: false
     gate:
       queue: awx
       jobs:
@@ -39,3 +41,5 @@
         - tox-awx-api
         - tox-awx-ui
         - tox-awx-swagger
+        - tox-awx-schemavalidation:
+            voting: false
