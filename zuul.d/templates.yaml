@@ -31,7 +31,7 @@
         - tox-awx-api
         - tox-awx-ui
         - tox-awx-swagger
-        - tox-awx-schemavalidation:
+        - tox-awx-detect-schema-change:
             voting: false
     gate:
       queue: awx
@@ -41,5 +41,5 @@
         - tox-awx-api
         - tox-awx-ui
         - tox-awx-swagger
-        - tox-awx-schemavalidation:
+        - tox-awx-detect-schema-change:
             voting: false

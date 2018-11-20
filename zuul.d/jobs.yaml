@@ -36,7 +36,7 @@
       tox_envlist: swagger
 
 - job:
-    name: tox-awx-schemavalidation
+    name: tox-awx-detect-schema-change
     parent: tox-awx
     vars:
-      tox_envlist: validate-schema
+      tox_envlist: detect-schema-change
