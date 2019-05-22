@@ -26,20 +26,20 @@
     check:
       queue: awx
       jobs:
-        - tox-awx-api-lint
-        - tox-awx-ui-lint
-        - tox-awx-api
-        - tox-awx-ui
-        - tox-awx-swagger
-        - tox-awx-detect-schema-change:
+        - awx-api-lint
+        - awx-ui-lint
+        - awx-api
+        - awx-ui
+        - awx-swagger
+        - awx-detect-schema-change:
             voting: false
     gate:
       queue: awx
       jobs:
-        - tox-awx-api-lint
-        - tox-awx-ui-lint
-        - tox-awx-api
-        - tox-awx-ui
-        - tox-awx-swagger
-        - tox-awx-detect-schema-change:
+        - awx-api-lint
+        - awx-ui-lint
+        - awx-api
+        - awx-ui
+        - awx-swagger
+        - awx-detect-schema-change:
             voting: false

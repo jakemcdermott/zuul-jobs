@@ -1,42 +1,35 @@
 - job:
-    name: tox-awx
-    parent: tox
-    pre-run: playbooks/clean-static-node.yaml
-    nodeset: static-node
-    abstract: true
+    name: awx-api-lint
+    parent: awx-tests
+    vars:
+      command: flake8
 
 - job:
-    name: tox-awx-api-lint
-    parent: tox-awx
+    name: awx-ui-lint
+    parent: awx-tests
     vars:
-      tox_envlist: api-lint
+      command: make ui-lint
 
 - job:
-    name: tox-awx-ui-lint
-    parent: tox-awx
+    name: awx-api
+    parent: awx-tests
     vars:
-      tox_envlist: ui-lint
+      command: /start_tests.sh
 
 - job:
-    name: tox-awx-api
-    parent: tox-awx
+    name: awx-ui
+    parent: awx-tests
     vars:
-      tox_envlist: api
+      command: make ui-test-ci
 
 - job:
-    name: tox-awx-ui
-    parent: tox-awx
+    name: awx-swagger
+    parent: awx-tests
     vars:
-      tox_envlist: ui
+      command: /start_tests.sh swagger
 
 - job:
-    name: tox-awx-swagger
-    parent: tox-awx
+    name: awx-detect-schema-change
+    parent: awx-tests
     vars:
-      tox_envlist: swagger
-
-- job:
-    name: tox-awx-detect-schema-change
-    parent: tox-awx
-    vars:
-      tox_envlist: detect-schema-change
+      command: /start_tests.sh detect-schema-change
