@@ -11,6 +11,12 @@
       command: make ui-lint
 
 - job:
+    name: awx-ui-next-lint
+    parent: awx-tests
+    vars:
+      command: make ui-next-lint
+
+- job:
     name: awx-api
     parent: awx-tests
     vars:
@@ -21,6 +27,12 @@
     parent: awx-tests
     vars:
       command: make ui-test-ci
+
+- job:
+    name: awx-ui-next
+    parent: awx-tests
+    vars:
+      command: make ui-next-test
 
 - job:
     name: awx-swagger
