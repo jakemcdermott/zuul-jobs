@@ -28,10 +28,12 @@
       jobs:
         - awx-api-lint
         - awx-ui-lint
-        - awx-ui-next-lint
+        - awx-ui-next-lint:
+            voting: false
         - awx-api
         - awx-ui
-        - awx-ui-next
+        - awx-ui-next:
+            voting: false
         - awx-swagger
         - awx-detect-schema-change:
             voting: false
@@ -40,8 +42,12 @@
       jobs:
         - awx-api-lint
         - awx-ui-lint
+        - awx-ui-next-lint:
+            voting: false
         - awx-api
         - awx-ui
+        - awx-ui-next:
+            voting: false
         - awx-swagger
         - awx-detect-schema-change:
             voting: false
