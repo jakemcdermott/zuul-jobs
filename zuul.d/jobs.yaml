@@ -45,3 +45,9 @@
     parent: awx-tests
     vars:
       command: /start_tests.sh detect-schema-change
+
+- job:
+    name: awx-ansible-modules
+    parent: awx-tests
+    vars:
+      command: /start_tests.sh test_collection_all

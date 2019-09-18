@@ -35,6 +35,8 @@
         - awx-swagger
         - awx-detect-schema-change:
             voting: false
+        - awx-ansible-modules:
+            voting: false
     gate:
       queue: awx
       jobs:
@@ -46,4 +48,6 @@
         - awx-ui-next
         - awx-swagger
         - awx-detect-schema-change:
+            voting: false
+        - awx-ansible-modules:
             voting: false
