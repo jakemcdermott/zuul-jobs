@@ -27,8 +27,6 @@
       queue: awx
       jobs:
         - awx-api-lint
-        - awx-ui-lint
-        - awx-ui-next-lint
         - awx-api
         - awx-ui
         - awx-ui-next
@@ -40,8 +38,6 @@
       queue: awx
       jobs:
         - awx-api-lint
-        - awx-ui-lint
-        - awx-ui-next-lint
         - awx-api
         - awx-ui
         - awx-ui-next
