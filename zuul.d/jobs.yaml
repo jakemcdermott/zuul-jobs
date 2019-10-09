@@ -5,18 +5,6 @@
       command: flake8
 
 - job:
-    name: awx-ui-lint
-    parent: awx-tests
-    vars:
-      command: make ui-lint
-
-- job:
-    name: awx-ui-next-lint
-    parent: awx-tests
-    vars:
-      command: make ui-next-lint
-
-- job:
     name: awx-api
     parent: awx-tests
     vars:
