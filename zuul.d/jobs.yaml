@@ -2,7 +2,7 @@
     name: awx-api-lint
     parent: awx-tests
     vars:
-      command: tox -e linters
+      command: /venv/awx/bin/tox -e linters
 
 - job:
     name: awx-api
