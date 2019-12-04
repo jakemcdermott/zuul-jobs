@@ -2,7 +2,7 @@
     name: awx-api-lint
     parent: awx-tests
     vars:
-      command: flake8
+      command: tox -e linters
 
 - job:
     name: awx-api
