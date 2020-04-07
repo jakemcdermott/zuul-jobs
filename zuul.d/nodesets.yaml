@@ -2,4 +2,4 @@
     name: static-node
     nodes:
       - name: static
-        label: static-ansible
+        label: static-ansible-new
