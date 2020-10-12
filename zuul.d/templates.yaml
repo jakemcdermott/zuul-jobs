@@ -3,6 +3,7 @@
     implied-branches:
       - master
       - devel
+      - execution-environments
 
 - project-template:
     name: python
