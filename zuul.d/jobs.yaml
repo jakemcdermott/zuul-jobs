@@ -17,12 +17,6 @@
       command: make ui-zuul-lint-and-test
 
 - job:
-    name: awx-ui-next
-    parent: awx-tests
-    vars:
-      command: make ui-next-zuul-lint-and-test
-
-- job:
     name: awx-swagger
     parent: awx-tests
     vars:

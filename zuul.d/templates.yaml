@@ -30,7 +30,6 @@
         - awx-api-lint
         - awx-api
         - awx-ui
-        - awx-ui-next
         - awx-swagger
         - awx-detect-schema-change:
             voting: false
@@ -41,7 +40,6 @@
         - awx-api-lint
         - awx-api
         - awx-ui
-        - awx-ui-next
         - awx-swagger
         - awx-detect-schema-change:
             voting: false
